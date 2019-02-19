@@ -392,13 +392,11 @@ blockquote footer {
 	font-size: 12px;
 	margin-right: 10px;
 }
-	.panel-title a.collapsed:before {
-		content: "\e61a";
-	}
-.panel-group .panel {
+.panel-title a.collapsed:before {
+	content: "\e61a";
 }
 .gla_simple_block {
-	padding: 100px;
+	padding: 80px 60px;
 	position: relative;
 	z-index: 2;
 }
@@ -5556,6 +5554,11 @@ footer {
 	top: 50%;
 	transform:translateY(-50%);
 	padding: 0 10px;
+}
+
+.mobile .gla_slide_txt.gla_slide_center_bottom {
+	top: 0;
+	transform:translateY(50%);
 }
 
 .mobile.landscape .gla_slide_txt {
