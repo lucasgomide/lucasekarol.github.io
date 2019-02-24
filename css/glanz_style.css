@@ -554,7 +554,7 @@ blockquote footer {
 	margin-left: auto;
 }
 .text-center p {
-	max-width: 600px;
+	max-width: 710px;
 	margin-right: auto;
 	margin-left: auto;
 }
@@ -5924,5 +5924,15 @@ header nav.active .gla_logo {
 }
 /*Responsive end*/
 
+.about-us .container {
+	padding-top: 62px;
+	padding-bottom: 48px;
+}
 
+.about-us .gla_subtitle {
+	margin-top: 0;
+}
 
+.gla_simple_block p {
+	text-align: left;
+}
