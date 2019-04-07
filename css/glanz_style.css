@@ -5937,3 +5937,11 @@ header nav.active .gla_logo {
 .gla_simple_block p {
 	text-align: left;
 }
+.error{
+	padding: 8px;
+	color: red;
+}
+.success{
+	padding: 8px;
+	color: green;
+}

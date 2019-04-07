@@ -513,7 +513,8 @@
 
                 <div class="row">
                     <div class="col-md-8 col-md-push-2">
-                        <form action="https://formspree.io/lucas.e.karol.casal@gmail.com" method="POST" target="_blank">
+                        <div class="feedback"></div>
+                        <form action="#" id="rsvp-mailer" method="POST" target="_blank">
                             <div class="row">
                                 <div class="col-md-5">
                                     <label for="name">Seu nome*</label>
@@ -590,6 +591,28 @@
   gtag('js', new Date());
 
   gtag('config', 'UA-137863300-1');
+</script>
+<script>
+    $("#rsvp-mailer").on('submit', function(e) {
+        e.preventDefault();
+        var feedback = $('.feedback')
+        $.post( {
+            url: "https://wedding-mailer.herokuapp.com/mailer",
+            dataType: 'json',
+            crossDomain: true,
+            data: $(this).serialize(),
+            success: function() {
+                feedback.removeClass('error')
+                feedback.addClass('success')
+                feedback.html('Email Enviado')
+            },
+            error: function(e) {
+                feedback.removeClass('success')
+                feedback.addClass('error')
+                feedback.html('Erro ao enviar email, tente novamente mais tarde.')
+            }
+        })
+    });
 </script>
 </body>
 </html>
