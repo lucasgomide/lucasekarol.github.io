@@ -226,11 +226,8 @@
 	$(window).scroll(function(){
 		if ($(window).scrollTop() > 100) {
 			$(".gla_logo").addClass('active');
-			$('body').addClass('gla_first_step');
-
 		}
 		else {
-			$('body').removeClass('gla_first_step');
 			$(".gla_logo").removeClass('active');
 		}
 		if ($(window).scrollTop() > 500) {
